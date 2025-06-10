@@ -48,15 +48,21 @@ deploy_package/
 
 ### 2. 环境准备
 
-```bash
-# 创建虚拟环境 (推荐)
-python3 -m venv venv
+# 安装 Python 3.10 (如未安装)
+# macOS: brew install python@3.10
+# Ubuntu: sudo apt install python3.10 python3.10-venv
+# Windows: 从 python.org 下载安装
+
+# 创建虚拟环境 (使用Python 3.10)
+python3.10 -m venv venv
 source venv/bin/activate  # Linux/macOS
 # 或者 venv\Scripts\activate  # Windows
 
+# 验证Python版本
+python --version  # 应显示 Python 3.10.x
+
 # 安装依赖
 pip install -r requirements_server.txt
-```
 
 ### 3. 启动服务
 
