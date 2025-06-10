@@ -1,0 +1,42 @@
+分子气味预测API部署包
+=====================
+
+打包时间: Tue Jun 10 19:07:34 CST 2025
+版本: 20250610_190733
+
+包含文件:
+total 84
+drwxrwxrwx 1 shanoa shanoa  4096 Jun 10 19:07 .
+drwxrwxrwx 1 shanoa shanoa  4096 Jun 10 19:06 ..
+-rwxrwxrwx 1 shanoa shanoa  4828 Jun 10 19:00 DEPLOY_README.md
+-rwxrwxrwx 1 shanoa shanoa   761 Jun 10 18:59 Dockerfile
+-rwxrwxrwx 1 shanoa shanoa     0 Jun 10 19:07 PACKAGE_MANIFEST.txt
+-rwxrwxrwx 1 shanoa shanoa  3106 Jun 10 19:07 QUICK_DEPLOY.md
+-rwxrwxrwx 1 shanoa shanoa  7662 Jun 10 18:57 README_server_deployment.md
+-rwxrwxrwx 1 shanoa shanoa   689 Jun 10 18:59 config.env
+drwxrwxrwx 1 shanoa shanoa  4096 Jun 10 19:02 openpom
+-rwxrwxrwx 1 shanoa shanoa  2849 Jun 10 19:00 package.sh
+-rwxrwxrwx 1 shanoa shanoa 14916 Jun 10 18:57 predict_odor_cpu.py
+-rwxrwxrwx 1 shanoa shanoa   737 Jun 10 18:57 requirements_server.txt
+-rwxrwxrwx 1 shanoa shanoa  7062 Jun 10 18:57 server_deploy.py
+-rwxrwxrwx 1 shanoa shanoa  1104 Jun 10 18:59 start_production.sh
+-rwxrwxrwx 1 shanoa shanoa  1780 Jun 10 18:58 start_server.sh
+-rwxrwxrwx 1 shanoa shanoa  6991 Jun 10 18:57 test_api_client.py
+-rwxrwxrwx 1 shanoa shanoa  5492 Jun 10 19:04 verify_deployment.sh
+
+文件统计:
+- Python文件: 36
+- 脚本文件: 4
+- 配置文件: 4
+- 文档文件: 3
+
+安装说明:
+1. 解压文件: tar -xzf odor-prediction-api-deploy_20250610_190733.tar.gz
+2. 阅读文档: cat DEPLOY_README.md
+3. 准备模型: 将模型文件放入 ensemble_models/ 目录
+4. 安装依赖: pip install -r requirements_server.txt
+5. 启动服务: ./start_server.sh
+
+技术支持:
+- 详细文档: README_server_deployment.md
+- 快速指南: DEPLOY_README.md
