@@ -46,12 +46,14 @@ deploy_package/
 └── (其他文件...)
 ```
 
-### 2. 环境准备
+
+```
+2. 环境准备
 
 # 安装 Python 3.10 (如未安装)
-macOS: brew install python@3.10
-Ubuntu: sudo apt install python3.10 python3.10-venv
-Windows: 从 python.org 下载安装
+# macOS: brew install python@3.10
+# Ubuntu: sudo apt install python3.10 python3.10-venv
+# Windows: 从 python.org 下载安装
 
 # 创建虚拟环境 (使用Python 3.10)
 python3.10 -m venv venv
