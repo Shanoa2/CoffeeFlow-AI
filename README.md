@@ -237,7 +237,7 @@ Content-Type: application/json
 GET /tasks
 ```
 
-## 🔧 Dify工作流详细配置
+##  Dify工作流详细配置
 
 ### 参数提取器优势
 -  **更稳定**：输出格式固定，避免JSON解析错误
