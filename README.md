@@ -277,22 +277,6 @@ docker run -p 5000:5000 \
     openpom-api
 ```
 
-##  配置优化
-
-### CPU性能优化
-
-```bash
-# 设置环境变量
-export OMP_NUM_THREADS=8      # 根据CPU核心数调整
-export MKL_NUM_THREADS=8      # Intel MKL线程数
-```
-
-### 生产环境配置
-
-```bash
-export WORKERS=4              # Gunicorn工作进程数
-export PORT=5000              # 服务端口
-export HOST=0.0.0.0          # 绑定地址
 ```
 
 ##  项目结构
@@ -326,54 +310,6 @@ python test_api_client.py --perf-test --num-requests 20
 python test_api_client.py --url http://your-server:5000
 ```
 
-##  故障排除
-
-### 常见问题
-
-1. **模型加载失败**
-   - 检查模型文件路径是否正确
-   - 确认 `ensemble_models/` 目录存在
-   - 验证 `.pt` 文件完整性
-
-2. **内存不足**
-   - 建议至少8GB RAM
-   - 可通过减少模型数量降低内存需求
-   - 调整批处理大小
-
-3. **端口被占用**
-   ```bash
-   # 查看端口占用
-   lsof -i :5000
-   
-   # 使用其他端口
-   export PORT=8080
-   ./start_server.sh
-   ```
-
-4. **HTTP请求返回400错误**
-   - 检查结构化输出的变量引用路径
-   - 确认引用格式：`{{#node-7.structured_output.smiles_list#}}`
-
-5. **参数提取不准确**
-   - 调整参数提取器的指令和默认值
-   - 确保参数类型和范围设置正确
-
-##  开发指南
-
-### 添加新功能
-
-1. 在 `server_deploy.py` 中添加新的API端点
-2. 在 `predict_odor_cpu.py` 中实现相应的预测逻辑
-3. 更新测试脚本 `test_api_client.py`
-4. 更新文档
-
-### 性能优化建议
-
-- 使用模型缓存减少加载时间
-- 实现请求批处理
-- 添加结果缓存（如Redis）
-- 使用异步处理提高并发能力
-
 ##  技术栈
 
 - **深度学习**：OpenPOM (DeepChem + DGL + PyTorch)
@@ -385,6 +321,7 @@ python test_api_client.py --url http://your-server:5000
 ##  相关资源
 
 - [OpenPOM原始论文](https://www.biorxiv.org/content/10.1101/2022.09.01.504602v4)
+- [OpenPOM项目地址](https://github.com/BioMachineLearning/openpom)
 - [DeepChem文档](https://deepchem.io/)
 - [DGL文档](https://www.dgl.ai/)
 - [Dify文档](https://docs.dify.ai/)
