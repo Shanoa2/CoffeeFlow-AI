@@ -43,13 +43,6 @@ CoffeeFlow-AI 结合了最先进的图神经网络气味预测技术（OpenPOM�
 4. **气味分析**：通过OpenPOM API预测分子气味
 5. **风味报告**：生成专业的咖啡品鉴报告
 
-##  系统要求
-
-- **操作系统**: Linux, macOS, Windows
-- **Python**: 3.9
-- **内存**: 8GB+ (推荐16GB)
-- **CPU**: 4核心+ (推荐8核心)
-- **存储**: 2GB+ (用于模型文件)
 
 ##  快速开始
 
@@ -111,7 +104,7 @@ curl https://capi.shanoa.net/
 - Body：
 ```json
 {
-  "smiles_list": {{#node-7.structured_output.smiles_list#}},
+  "smiles_list": {{node-7.structured_output.smiles_list}},
   "threshold": 0.3,
   "top_k": 5
 }
@@ -293,21 +286,6 @@ CoffeeFlow-AI/
 ├── dify_prompts.md             # LLM提示词模板
 ├── test_dify_integration.py    # 集成测试脚本
 └── README.md                   # 本文件
-```
-
-##  测试
-
-使用提供的测试脚本：
-
-```bash
-# 基础功能测试
-python test_api_client.py
-
-# 性能测试
-python test_api_client.py --perf-test --num-requests 20
-
-# 测试远程服务器
-python test_api_client.py --url http://your-server:5000
 ```
 
 ##  技术栈
